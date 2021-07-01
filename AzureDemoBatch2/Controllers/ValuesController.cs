@@ -43,5 +43,26 @@ namespace AzureDemoBatch2.Controllers
         public void Delete(int id)
         {
         }
+
+        [HttpGet]
+        [Route("Student")]
+        public List<Student> GetStudents()
+        {
+            return new List<Student>()
+            {
+             new Student{ Id=1, Name="Muhammad Ayaz", Email="m.ayaz@outlook.com" },
+             new Student{ Id=2, Name="Dev Ayaz", Email="d.ayaz@outlook.com" },
+             new Student{ Id=3, Name="Chandan Bhagat", Email="chandan.bhagat@outlook.com" },
+             new Student{ Id=4, Name="Bilawal Khan", Email="b.khan@outlook.com" },
+             new Student{ Id=5, Name="Haroon Iqbal", Email="h.iqbal@outlook.com" }
+            };
+        }
+    }
+
+    public class Student
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
     }
 }
